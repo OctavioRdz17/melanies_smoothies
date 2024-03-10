@@ -18,7 +18,12 @@ st.write('The name on your smoothie will be: '+name_on_order)
 
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON'))
-st.dataframe(my_dataframe, use_container_width=True)
+# st.dataframe(my_dataframe, use_container_width=True)
+# st.stop()
+
+# convert to pandas dataframe so we can use Loc function
+pd_df = my_dataframe.to_pandas()
+st.dataframe(pd_df, use_container_width=True)
 st.stop()
 
 
