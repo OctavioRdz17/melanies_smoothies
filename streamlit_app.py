@@ -64,5 +64,6 @@ if ingredients_list:
         st.success('Your Smoothie is ordered!  '+name_on_order+'.',icon="✅")
 
         # despues del sumit borrar los campos
-        name_on_order = None
+        name_on_order = ''
+        ingredients_list = ''
     
