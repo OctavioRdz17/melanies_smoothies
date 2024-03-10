@@ -6,7 +6,7 @@ import requests
 
 
 # Write directly to the app
-st.title("🥤My Parents New Healthy Dinner 🥤")
+st.title("My Parents New Healthy Dinner🥤")
 st.write(
     """Choose the fruits you want on your Smoothie
     """
