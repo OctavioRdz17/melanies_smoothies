@@ -44,7 +44,7 @@ if ingredients_list:
         ingredients_string += fruit_chosen +' '
 
         search_on = pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON'].iloc[0]
-        st.write('Search value for '+fruit_chosen+' is: '+search_on,'.')
+        # st.write('Search value for '+fruit_chosen+' is: '+search_on,'.')
 
         st.subheader(fruit_chosen + ' Nutrition Information')
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+search_on)
@@ -63,7 +63,4 @@ if ingredients_list:
         session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered!  '+name_on_order+'.',icon="✅")
 
-        # despues del sumit borrar los campos
-        name_on_order = ''
-        ingredients_list = ''
     
